@@ -6,6 +6,7 @@ use App\Station;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StationRequest;
+use Illuminate\Support\Facades\DB;
 
 class StationController extends Controller
 {
@@ -16,7 +17,7 @@ class StationController extends Controller
      */
     public function index(Request $request)
     {
-        $query = Station::latest();
+        $query = DB::table('stations');
 
         if ($request->filled('city')) {
             $query->where('city', $request->get('city'));
