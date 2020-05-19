@@ -11,7 +11,7 @@
 
 Проверки(Postman):
 
-1. Create new station(POST): http://localhost:8088/api/stations
+1. Create new station(POST): http://localhost:8088/api/stations (при добавлении новой записии поле "state" дожно быть только "opened" или "closed")
 2. Show station(GET): http://localhost:8088/api/stations/{id}
 3. Update station(PUT): http://localhost:8088/api/stations/{id}   
 4. Delete station(DELETE): http://localhost:8088/api/stations/{id}
